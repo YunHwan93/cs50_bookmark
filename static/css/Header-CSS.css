@@ -1,0 +1,258 @@
+.menu-uniable {
+	border: none;
+	margin-bottom: 0;
+	background-color: #7593ba;
+	padding: 30px 0px 20px 0px;
+	border-radius: 0;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	color: ;
+	font-family: Roboto, "Nanum Gothic", Tahoma, Dotum, Verdana, Arial, "Trebuchet MS";
+	font-size: 13px;
+}
+.fixed .menu-uniable {
+	padding: 0px;
+}
+.menu-uniable > .container {
+	text-align: center;
+}
+.menu-uniable #mini-home {
+	line-height: 57px;
+	color: #888888;
+}
+.menu-uniable .navbar-toggle {
+	height: 60px;
+	margin: auto 5px auto;
+}
+.menu-uniable > .container .navbar-brand {
+	margin-left: 0px;
+}
+.menu-uniable .navbar-header, 
+.menu-uniable .navbar-brand {
+	width: 100%;
+}
+.menu-uniable .navbar-brand img {
+	max-height: 150px;
+}
+.menu-uniable #tpl-logo-text {
+	font-family: 'Playfair Display', 'Nanum Gothic';
+	font-size: 25px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #f5f2f5;
+	word-wrap: break-word;
+	display: inline-table;
+	vertical-align: middle;
+}
+.menu-uniable .navbar-collapse ul.nav {
+	float: none;
+}
+.menu-uniable ul.navbar-nav > li > a ,
+.menu-uniable .dropdown-menu > li > a {
+	font-family: 'Alegreya', 'Nanum Gothic';
+}
+.menu-uniable ul.navbar-nav > li > a ,
+.menu-uniable ul.navbar-nav > li > a:focus {
+	font-size: 13px;
+	letter-spacing: 0.2em;
+	color: #888888;
+	line-height: 3;
+	padding: 0 30px;
+}
+.menu-uniable .dropdown-menu > li > a,
+.menu-uniable .dropdown-menu > li > a:focus {
+	font-size: 13px;
+	letter-spacing: 0.2em;
+	color: #888888;
+	background-color: transparent;
+	line-height: 3;
+	padding: 0 30px 0 10px;
+}
+.menu-uniable .dropdown-menu > li > a:before {
+	content: "|";
+	font-family: 'Alegreya';
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-right: 10px;
+	color: #888888;
+	font-size: 11px;
+	font-weight: 400;
+	float: left;
+}
+.menu-uniable.navbar-default .navbar-nav > li > a:hover, 
+.menu-uniable.navbar-default .navbar-nav > li:hover > a, 
+.menu-uniable.navbar-default .navbar-nav > li.active > a, 
+.menu-uniable.navbar-default .navbar-nav > li.active > a:focus, 
+.menu-uniable.navbar-default .navbar-nav > li.active > a:hover,
+.menu-uniable.navbar-default .dropdown-menu > li > a:hover, 
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:focus,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:hover {
+	background-color: transparent;
+	color: #303030;
+}
+.menu-uniable .navbar-collapse ul.navbar-nav {
+	display: inline-block;
+	text-align: center;
+}
+.menu-uniable .navbar-collapse {
+	line-height: 1;
+}
+.menu-uniable .dropdown-menu {
+	border-radius: 0;
+	min-width: 110px;
+	text-align: left;
+}
+.menu-uniable.transparent #tpl-logo-text {
+	color: #fff !important;
+}
+@media only screen and (min-width:769px) {
+	.fixed .menu-uniable .navbar-collapse {
+		padding-left: 40px;
+	}
+	.menu-uniable ul.navbar-nav > li > a ,
+ .menu-uniable ul.navbar-nav > li > a:focus {
+		line-height: 60px;
+	}
+}
+@media only screen and (max-width:768px) {
+	.menu-uniable {
+		padding: 0px;
+	}
+	.menu-uniable .navbar-header,  .menu-uniable .navbar-brand {
+		width: auto;
+		margin: 0;
+		height: 60px;
+	}
+	.menu-uniable .nav#tpl-menu {
+		background-color: rgba(0,0,0,0.75);
+		padding: 10px 0;
+	}
+	.menu-uniable > .container {
+		padding: 0px;
+	}
+	.menu-uniable .navbar-collapse {
+		border: none;
+		padding: 0px;
+		margin: 0;
+	}
+	.menu-uniable .navbar-brand {
+		margin: 0;
+		line-height: 60px;
+		padding: 0px 0px 0px 15px;
+	}
+	.menu-uniable .navbar-collapse ul.navbar-nav {
+		width: 100%;
+	}
+	.menu-uniable .navbar-brand img {
+		max-height: 40px;
+		max-width: 150px;
+	}
+	.menu-uniable #tpl-logo-text {
+		font-size: 18px;
+	}
+	.menu-uniable  ul.navbar-nav > li > a,
+ .menu-uniable  ul.navbar-nav > li > a:focus {
+		line-height: 2.8;
+		font-weight: bold;
+	}
+	.menu-uniable .dropdown-menu {
+		height: auto;
+		text-align: center;
+	}
+	.menu-uniable .dropdown-menu li a,
+ .menu-uniable .dropdown-menu li a:focus {
+		padding: 0 20px;
+		font-size: 12px;
+		line-height: 2.4;
+		font-weight: normal;
+	}
+	.menu-uniable .dropdown-menu > li > a:before {
+		content: '';
+	}
+	.menu-uniable.navbar-default .navbar-nav > li > a:hover, 
+ .menu-uniable.navbar-default .navbar-nav > li:hover > a, 
+ .menu-uniable.navbar-default .navbar-nav > li.active > a, 
+ .menu-uniable.navbar-default .navbar-nav > li.active > a:focus, 
+ .menu-uniable.navbar-default .navbar-nav > li.active > a:hover,
+ .menu-uniable.navbar-default .dropdown-menu > li > a:hover, 
+ .menu-uniable.navbar-default .dropdown-menu > li:hover > a,
+ .menu-uniable.navbar-default .dropdown-menu > li.active > a,
+ .menu-uniable.navbar-default .dropdown-menu > li.active > a:focus,
+ .menu-uniable.navbar-default .dropdown-menu > li.active > a:hover {
+		background-color: transparent;
+		color: #fff;
+	}
+}
+.menu-uniable ul.navbar-nav > li > a {
+}
+.menu-uniable ul.navbar-nav > li > a,
+.menu-uniable ul.navbar-nav > li > a:focus,
+.menu-uniable .dropdown-menu > li > a,
+.menu-uniable .dropdown-menu > li > a:focus {
+	font-size: 18px;
+}
+.menu-uniable ul.navbar-nav > li > a,
+.menu-uniable ul.navbar-nav > li > a:active,
+.menu-uniable ul.navbar-nav > li > a:focus,
+.menu-uniable .dropdown-menu > li > a,
+.menu-uniable .dropdown-menu > li > a:active,
+.menu-uniable .dropdown-menu > li > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li > a,
+.menu-uniable.navbar-default .navbar-nav > li > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li > a:hover,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a:active,
+.menu-uniable.navbar-default .navbar-nav > li.active > a,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:active,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:hover,
+.menu-uniable.navbar-default .dropdown-menu > li > a:hover,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a:focus,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a:active,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:focus,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:active,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:hover {
+	background-color: transparent;
+}
+.menu-uniable .navbar-nav#tpl-menu .dropdown .dropdown-menu,
+.menu-uniable .navbar-nav#tpl-menu {
+	background-color: #7593ba;
+}
+.menu-uniable ul.navbar-nav > li > a,
+.menu-uniable ul.navbar-nav > li > a:active,
+.menu-uniable ul.navbar-nav > li > a:focus,
+.menu-uniable .dropdown-menu > li > a,
+.menu-uniable .dropdown-menu > li > a:active,
+.menu-uniable .dropdown-menu > li > a:focus {
+	color: #ffffff !important;
+}
+.menu-uniable.navbar-default .navbar-nav > li > a:hover,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li:hover > a:active,
+.menu-uniable.navbar-default .navbar-nav > li.active > a,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:focus,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:active,
+.menu-uniable.navbar-default .navbar-nav > li.active > a:hover,
+.menu-uniable.navbar-default .dropdown-menu > li > a:hover,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a:focus,
+.menu-uniable.navbar-default .dropdown-menu > li:hover > a:active,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:focus,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:active,
+.menu-uniable.navbar-default .dropdown-menu > li.active > a:hover {
+	color: #ffffff !important;
+}
+.menu-uniable ul.navbar-nav > li > a,
+.menu-uniable .dropdown-menu > li > a {
+	font-family: Georgia !important;
+}
