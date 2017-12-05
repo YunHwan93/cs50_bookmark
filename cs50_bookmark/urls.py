@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', bk_views.index, name='index'),
     url(r'^login$', bk_views.login, name='login'),
+    url(r'^contact$', bk_views.contact, name='contact'),
     url(r'^check_login', bk_views.check_login, name='check_login'),
     url(r'^logout$', bk_views.logout, name='logout'),
     url(r'^logout$', bk_views.logout, name='logout'),
