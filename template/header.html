@@ -1,31 +1,26 @@
+<header class="menu-uniable navbar navbar-default" role="navigation">
+        <div class="container full-width">
+            <div class="navbar-header menu-logo-top">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu-uniable">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/config" id="site-home">
+                    <img src="//i.addblock.net/template/main_logo.png" class="hide" data-attach="true">
+                    <span id="tpl-logo-text" class="" data-selector="#tpl-logo-text">Uniable</span>
+                </a>
+            </div>
 
-        <div class="page-header">
-        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-          <a class="navbar-brand" href="{% url 'index' %}">TeamLab</a>
-          <ul class="nav navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bookmark<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="{% url "bookmark_list" %}">Bookmark List</a></li>
-                    <li><a href="{% url "bookmark" %}">Add Bookmark</a></li>
-                </ul>
-            </li>
-              {% if login_id %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">{{ login_id }}</a>
-                </li>
-              {% else %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
+            <div class="collapse navbar-collapse navbar-menu-uniable">
+                <div class="mini-home" id="mini-home"><i class="fa fa-angle-double-up"></i></div>
+                <ul class="nav navbar-nav" id="tpl-menu"><li class="active"><a href="{% url 'index' %}">Home</a></li>
+<li class=""><a href="{% url 'login' %}">게시판</a></li>
+<li class=""><a href="/config/page/Fund">Fund</a></li>
+<li class=""><a href="{% url 'contact' %}">CONTACT</a></li>
 
-              {% endif %}
-          </ul>
-        </nav>
-    </div>
+</ul>
+            </div>
+        </div>
+</header>

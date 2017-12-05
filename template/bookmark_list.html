@@ -6,33 +6,143 @@
 {% endblock %}
 
 {% block content %}
+    <div class="userEL1454809" data-fcolor="black">
     <div class="container">
-    <div class="row">
-      <div class="table-responsive">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Bookmark Name</th>
-              <th>Bookmark URL</th>
-              <th>Created Date</th>
-            </tr>
-          </thead>
-          <tbody id="bookmark_table">
-          {% for bookmark in all_bookmark %}
-                <tr>
-                    <td>{{ bookmark.bookmark_id }}</td>
-                    <td><a href="{% url "bookmark_detail" bookmark.bookmark_id %}">{{ bookmark.bookmark_name }}</a></td>
-                    <td><a href="{{ bookmark.bookmark_url }}" target="_blank">{{ bookmark.bookmark_url }}</a></td>
-                    <td>{{ bookmark.created_time }}</td>
-                </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-12 text-center">
-      <ul class="pagination pagination-lg pager" id="myPager"></ul>
-      </div>
-	</div>
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 search-box clearfix">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <select id="scate" class="form-control" name="scate" placeholder="Category">
+                            <option value="">category</option>
+                        </select>
+                    </div>
+                    <div class="input-group-btn">
+                        <select id="sfl" class="form-control" name="sfl" placeholder="Search">
+                            <option value="all">all</option>
+                            <option value="title">title</option>
+                            <option value="content">content</option>
+                            <option value="name">name</option>
+                        </select>
+                    </div>
+                    <input type="text" id="stx" class="form-control" name="stx">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default search-btn"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 table-wrap clearfix">
+                <table class="table">
+                    <thead class="thead-top-line">
+                        <tr class="thead-bottom-line">
+                            <th class="tpl-forum-num">no</th>
+                            <th class="tpl-forum-category">category</th>
+                            <th class="tpl-forum-title">title</th>
+                            <th class="tpl-forum-name">name</th>
+                            <th class="tpl-forum-date">date</th>
+                            <th class="tpl-forum-hit">view</th>
+                        </tr>
+                    </thead>
+                    <tbody data-loop="true" data-view="5">
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num"><i class="fa fa-volume-up"></i></td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content"><span class="tpl-forum-list-title">Frequently asked question about this pages and delevery process while ordered post didn't arrive</span> <i class="fa fa-comment tpl-forum-list-comment-icon"></i> <span class="tpl-forum-list-comment">7</span></td>
+                            <td class="tpl-forum-list-name">admin</td>
+                            <td class="tpl-forum-list-date">now</td>
+                            <td class="tpl-forum-list-hit">50</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">9</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Good design.I will be glad if you see my latest work.</td>
+                            <td class="tpl-forum-list-name">Jack</td>
+                            <td class="tpl-forum-list-date">5 hour ago</td>
+                            <td class="tpl-forum-list-hit">175</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">8</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">awesome work..really very inspirational job.congrats</td>
+                            <td class="tpl-forum-list-name">David James</td>
+                            <td class="tpl-forum-list-date">3 days ago</td>
+                            <td class="tpl-forum-list-hit">534</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">7</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Beautiful design and layout.. Great job</td>
+                            <td class="tpl-forum-list-name">BaByliss</td>
+                            <td class="tpl-forum-list-date">dev 22</td>
+                            <td class="tpl-forum-list-hit">51</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">6</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Amazing work one really feels like in a stone age. Impressive!</td>
+                            <td class="tpl-forum-list-name">Oliver Warren</td>
+                            <td class="tpl-forum-list-date">dev 7</td>
+                            <td class="tpl-forum-list-hit">235</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">5</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Unbelievable divat not dive project itself is awesome but it's presentation here... congratulations!</td>
+                            <td class="tpl-forum-list-name">DIANA</td>
+                            <td class="tpl-forum-list-date">nov 31</td>
+                            <td class="tpl-forum-list-hit">165</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">4</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Excellent work! Great presentation!</td>
+                            <td class="tpl-forum-list-name">Jett</td>
+                            <td class="tpl-forum-list-date">nov 18</td>
+                            <td class="tpl-forum-list-hit">25</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">3</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">od design.I will be glad if you see my latest work.</td>
+                            <td class="tpl-forum-list-name">Lincoln</td>
+                            <td class="tpl-forum-list-date">nov 17</td>
+                            <td class="tpl-forum-list-hit">266</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">2</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Beautiful design and layout.. Great job</td>
+                            <td class="tpl-forum-list-name">Blaise</td>
+                            <td class="tpl-forum-list-date">nov 13</td>
+                            <td class="tpl-forum-list-hit">369</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">1</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Amazing work one really feels like in a stone age. Impressive!</td>
+                            <td class="tpl-forum-list-name">Raphael</td>
+                            <td class="tpl-forum-list-date">nov 4</td>
+                            <td class="tpl-forum-list-hit">16</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-default btn-sm tpl-forum-write">write</button>
+                <nav class="text-center">
+                    <ul class="pagination pagination-sm tpl-forum-pagination">
+                        <li><a href="#" data-label="prev"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" data-label="next"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
     </div>
+</div>
 {% endblock %}

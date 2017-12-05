@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style id='el_0css'>.userEL1454945{font-family:'Open Sans','Noto sans kr';padding:30px 0 30px 0}.userEL1454945 h3{font-family:'Open Sans','Noto sans kr';font-weight:300}.userEL1454945 .text{font-family:'Open Sans','Noto sans kr';font-size:13px;line-height:1.2;margin-bottom:15px;color:#999;font-weight:300}.userEL1454945 .form-control{font-family:'Open Sans','Noto sans kr';width:100%;line-height:1.4;background-color:#fff;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;padding:4px 12px;border-color:#d3d3d3;box-shadow:none;-webkit-shadow:none}.userEL1454945 .form-inline{padding-left:25%;padding-right:25%;text-align:left}.userEL1454945 .form-inline .form-group{margin-bottom:20px;width:100%}.userEL1454945 .form-checkbox-text{font-size:12px;font-weight:normal;margin-top:5px}.userEL1454945 .form-checkbox{position:relative;top:3px}.userEL1454945 .form-inline .form-group.last{margin-bottom:0}.userEL1454945 .btn{font-family:'Open Sans','Noto sans kr';margin-top:15px;margin-bottom:0;padding:10px 50px;border:none;border:0;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;color:#fff;background-color:#46505d;background-repeat:no-repeat;background-size:cover;background-position:center center;max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.userEL1454945 .btn:hover,.userEL1454945 .btn:focus{-webkit-transition:ease-out .7s;-ms-transition:ease-out .7s;-moz-transition:ease-out .7s;-o-transition:ease-out .7s;transition:ease-out .7s}.userEL1454945 .form-inline textarea{width:100%;height:190px;padding:12px;font-size:13px}.userEL1454945 ::-webkit-input-placeholder{color:#949fab}.userEL1454945 input:-moz-placeholder{color:#949fab}@media only screen and (max-width:767px){.userEL1454945 h5{margin-bottom:25px}.userEL1454945 .text{margin-bottom:32px}.userEL1454945 .form-inline{padding-left:15%;padding-right:15%}.userEL1454945 .btn{margin-top:35px}}@media only screen and (max-width:480px){.userEL1454945 h5{margin-bottom:15px}.userEL1454945 .text{margin-bottom:20px}.userEL1454945 .form-inline{padding-left:15px;padding-right:15px}.userEL1454945 .btn{margin-bottom:22px}}</style>	<div class="userEL1454945">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-inline" role="form">
+                    <div class="form-group">
+                        <h3 class="require">성명</h3>
+                        <p class="text">항목에 대한 설명을 입력해주세요</p>
+                        <input class="form-control" type="text" placeholder="" form-idx="1" form-seq="16481" form-name="성명" form-type="text" form-require="1" form-check="">
+                    </div>
+                    <div class="form-group">
+                        <h3 class="require">이메일</h3>
+                        <p class="text">항목에 대한 설명을 입력해주세요</p>
+                        <input class="form-control" type="email" placeholder="" form-idx="2" form-seq="16482" form-name="이메일" form-type="email" form-require="1" form-check="">
+                    </div>
+                    <div class="form-group">
+                        <h3 class="require">제목</h3>
+                        <p class="text">항목에 대한 설명을 입력해주세요</p>
+                        <input class="form-control" type="text" placeholder="" form-idx="3" form-seq="16483" form-name="제목" form-type="text" form-require="1" form-check="">
+                    </div>
+                    <div class="form-group">
+                        <h3 class="require">내용</h3>
+                        <p class="text">항목에 대한 설명을 입력해주세요</p>
+                        <textarea class="form-control" placeholder="" form-idx="4" form-seq="16484" form-name="내용" form-type="memo" form-require="1" form-check=""></textarea>
+                    </div>
+                    <div class="form-group last form-privacy">
+                        <h3 class="require">개인정보취급방침</h3>
+                        <p class="text">항목에 대한 설명을 입력해주세요</p>
+                        <textarea class="form-control" form-privacy-text readonly></textarea>
+                        <label class='form-checkbox-text'><input type="checkbox" class="form-checkbox" form-privacy form-require="1"> 개인정보수집동의</label>
+                    </div>
+                    <div class='form-submit-wrap'><span class="btn" data-selector=".btn" data-edit="true" data-form-submit="" data-background="true" data-title="button background">제출</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -6,129 +6,143 @@
 {% endblock %}
 
 {% block content %}
+   <div class="userEL1454809" data-fcolor="black">
     <div class="container">
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Sign In</div>
-                    <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot
-                        password?</a></div>
-                </div>
+        <div class="row">
 
-                <div style="padding-top:30px" class="panel-body">
-                    {%  if status %}
-                        <div id="login-alert" class="alert alert-danger col-sm-12">{{ status }}</div>
-                    {% endif %}
-
-                    <form id="loginform" class="form-horizontal" role="form" action="{% url "check_login" %}" method="post">
-                        {% csrf_token %}
-                        <div style="margin-bottom: 25px" class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="email" value=""
-                                   placeholder="username or email">
-                        </div>
-
-                        <div style="margin-bottom: 25px" class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="login-password" type="password" class="form-control" name="password"
-                                   placeholder="password">
-                        </div>
-
-
-                        <div class="input-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                </label>
-
-                            </div>
-                        </div>
-
-
-                        <div style="margin-top:10px" class="form-group">
-                            <!-- Button -->
-
-                            <div class="col-sm-12 controls">
-                                <button id="btn-login" class="btn btn-success" type="submit">Login </button>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <div class="col-md-12 control">
-                                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
-                                    Don't have an account!
-                                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
-                                        Sign Up Here
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                </div>
-            </div>
-        </div>
-        <div id="signupbox" style="display:none; margin-top:50px"
-             class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Sign Up</div>
-                    <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#"
-                                                                                               onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign
-                        In</a></div>
-                </div>
-                <div class="panel-body">
-                    <form id="signupform" class="form-horizontal" role="form" action="{% url "user_registration_process" %}" method="post">
-                        {% csrf_token %}
-
-                        <div id="signupalert" style="display:none" class="alert alert-danger">
-                            <p>Error:</p>
-                            <span></span>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="email" class="col-md-3 control-label">Email</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="email" placeholder="Email Address">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="firstname" class="col-md-3 control-label">First Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="firstname" placeholder="First Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname" class="col-md-3 control-label">Last Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="lastname" placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-3 control-label">Password</label>
-                            <div class="col-md-9">
-                                <input type="password" class="form-control" name="passwd" placeholder="Password">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <!-- Button -->
-                            <div class="col-md-offset-3 col-md-9">
-                                <button id="btn-signup" type="submit" class="btn btn-info"  ><i
-                                        class="icon-hand-right"></i> &nbsp Sign Up
-                                </button>
-                            </div>
-                        </div>
-
-                    </form>
+            <div class="col-xs-12 col-sm-12 col-md-12 search-box clearfix">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <select id="scate" class="form-control" name="scate" placeholder="Category">
+                            <option value="">category</option>
+                        </select>
+                    </div>
+                    <div class="input-group-btn">
+                        <select id="sfl" class="form-control" name="sfl" placeholder="Search">
+                            <option value="all">all</option>
+                            <option value="title">title</option>
+                            <option value="content">content</option>
+                            <option value="name">name</option>
+                        </select>
+                    </div>
+                    <input type="text" id="stx" class="form-control" name="stx">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default search-btn"><i class="fa fa-search"></i></button>
+                    </span>
                 </div>
             </div>
 
+            <div class="col-xs-12 col-sm-12 col-md-12 table-wrap clearfix">
+                <table class="table">
+                    <thead class="thead-top-line">
+                        <tr class="thead-bottom-line">
+                            <th class="tpl-forum-num">no</th>
+                            <th class="tpl-forum-category">category</th>
+                            <th class="tpl-forum-title">title</th>
+                            <th class="tpl-forum-name">name</th>
+                            <th class="tpl-forum-date">date</th>
+                            <th class="tpl-forum-hit">view</th>
+                        </tr>
+                    </thead>
+                    <tbody data-loop="true" data-view="5">
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num"><i class="fa fa-volume-up"></i></td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content"><span class="tpl-forum-list-title">Frequently asked question about this pages and delevery process while ordered post didn't arrive</span> <i class="fa fa-comment tpl-forum-list-comment-icon"></i> <span class="tpl-forum-list-comment">7</span></td>
+                            <td class="tpl-forum-list-name">admin</td>
+                            <td class="tpl-forum-list-date">now</td>
+                            <td class="tpl-forum-list-hit">50</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">9</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Good design.I will be glad if you see my latest work.</td>
+                            <td class="tpl-forum-list-name">Jack</td>
+                            <td class="tpl-forum-list-date">5 hour ago</td>
+                            <td class="tpl-forum-list-hit">175</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">8</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">awesome work..really very inspirational job.congrats</td>
+                            <td class="tpl-forum-list-name">David James</td>
+                            <td class="tpl-forum-list-date">3 days ago</td>
+                            <td class="tpl-forum-list-hit">534</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">7</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Beautiful design and layout.. Great job</td>
+                            <td class="tpl-forum-list-name">BaByliss</td>
+                            <td class="tpl-forum-list-date">dev 22</td>
+                            <td class="tpl-forum-list-hit">51</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">6</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Amazing work one really feels like in a stone age. Impressive!</td>
+                            <td class="tpl-forum-list-name">Oliver Warren</td>
+                            <td class="tpl-forum-list-date">dev 7</td>
+                            <td class="tpl-forum-list-hit">235</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">5</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Unbelievable divat not dive project itself is awesome but it's presentation here... congratulations!</td>
+                            <td class="tpl-forum-list-name">DIANA</td>
+                            <td class="tpl-forum-list-date">nov 31</td>
+                            <td class="tpl-forum-list-hit">165</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">4</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Excellent work! Great presentation!</td>
+                            <td class="tpl-forum-list-name">Jett</td>
+                            <td class="tpl-forum-list-date">nov 18</td>
+                            <td class="tpl-forum-list-hit">25</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">3</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">od design.I will be glad if you see my latest work.</td>
+                            <td class="tpl-forum-list-name">Lincoln</td>
+                            <td class="tpl-forum-list-date">nov 17</td>
+                            <td class="tpl-forum-list-hit">266</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">2</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Beautiful design and layout.. Great job</td>
+                            <td class="tpl-forum-list-name">Blaise</td>
+                            <td class="tpl-forum-list-date">nov 13</td>
+                            <td class="tpl-forum-list-hit">369</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="tpl-forum-list-num">1</td>
+                            <td class="tpl-forum-list-category">category</td>
+                            <td class="tpl-forum-list-content">Amazing work one really feels like in a stone age. Impressive!</td>
+                            <td class="tpl-forum-list-name">Raphael</td>
+                            <td class="tpl-forum-list-date">nov 4</td>
+                            <td class="tpl-forum-list-hit">16</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-default btn-sm tpl-forum-write">write</button>
+                <nav class="text-center">
+                    <ul class="pagination pagination-sm tpl-forum-pagination">
+                        <li><a href="#" data-label="prev"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" data-label="next"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
 
         </div>
     </div>
+</div>
 {% endblock %}
