@@ -47,6 +47,9 @@ def login(request):
         return render(request, 'login_form.html')
     return render(request, 'login_form.html', {"login_id": email})
 
+def contact(request):
+    return render(request, 'contact.html')
+
 
 def logout(request):
     try:
