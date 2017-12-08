@@ -6,10 +6,11 @@ from bookmark import views as bk_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', bk_views.index, name='index'),
-    url(r'^login$', bk_views.login, name='login'),
+    url(r'^board$', bk_views.board, name='board'),
     url(r'^contact$', bk_views.contact, name='contact'),
     url(r'^check_login', bk_views.check_login, name='check_login'),
     url(r'^logout$', bk_views.logout, name='logout'),
+    url(r'^funding$', bk_views.funding, name='funding'),
     url(r'^logout$', bk_views.logout, name='logout'),
     url(r'^logout_process', bk_views.logout_process, name='logout_process'),
     url(r'^user_registration_process', bk_views.user_registration_process, name='user_registration_process'),

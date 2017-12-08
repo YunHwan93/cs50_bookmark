@@ -14,12 +14,19 @@ def index(request):
         return render(request, 'index.html')
     return render(request, 'index.html', {"login_id": email})
 
+def funding(request):
+    try:
+        email = request.session['login_id']
+    except KeyError as e:
+        return render(request, 'funding.html')
+    return render(request, 'funding.html', {"login_id": email})
+
 
 def bookmark(request):
     try:
         email = request.session['login_id']
     except KeyError as e:
-        return render(request, 'login_form.html')
+        return render(request, 'board.html')
 
     all_bookmark = None
     if request.method == 'POST':
@@ -40,12 +47,12 @@ def bookmark(request):
         return render(request, 'bookmark.html', result)
 
 
-def login(request):
+def board(request):
     try:
         email = request.session['login_id']
     except KeyError as e:
-        return render(request, 'login_form.html')
-    return render(request, 'login_form.html', {"login_id": email})
+        return render(request, 'board.html')
+    return render(request, 'board.html', {"login_id": email})
 
 def contact(request):
     return render(request, 'contact.html')
@@ -55,7 +62,7 @@ def logout(request):
     try:
         email = request.session['login_id']
     except KeyError as e:
-        return render(request, 'login_form.html')
+        return render(request, 'board.html')
     return render(request, 'logout_form.html', {"login_id": email})
 
 
@@ -76,10 +83,10 @@ def check_login(request):
                 return render(request, 'index.html', {"login_id": email})
             else:
                 status = "Password가 틀렸습니다"
-                return render(request, 'login_form.html', {"status": status })
+                return render(request, 'board.html', {"status": status})
         except User.DoesNotExist:
             status = "존재하지 않는 아이디입니다."
-            return render(request, 'login_form.html', {"status": status})
+            return render(request, 'board.html', {"status": status})
 
 
 def user_registration_process(request):
@@ -89,7 +96,7 @@ def user_registration_process(request):
         try:
             User.objects.get(username=email)
             status = "이미 존재하는 아이디입니다"
-            return render(request, 'login_form.html', {"status": status})
+            return render(request, 'board.html', {"status": status})
         except User.DoesNotExist:
             firstname = request.POST["firstname"]
             lastname = request.POST["lastname"]
